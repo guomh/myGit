@@ -1,0 +1,12 @@
+<html>
+<body>
+    <iframe id='otherPage' src='http://127.0.0.1:5500/b.html'></iframe>
+  <script type="text/javascript">
+  var iframeWin = document.getElementById("otherPage").contentWindow; 
+     setInterval(function(){
+        iframeWin.postMessage('send msg','*');
+        console.log('send');
+     },1000)
+  </script>
+</body>
+</html>
